@@ -10,7 +10,7 @@ const vowels = 'aeoui';
 let vowelCount = 0;
 let consonantCount = 0;
 
-for (i = 0; i < word.length; i++) {
+for (let i = 0; i < word.length; i++) {
     if (vowels.includes(word[i])) {
         vowelCount++;
     } else {
@@ -19,6 +19,7 @@ for (i = 0; i < word.length; i++) {
 
 }
 
-console.log(`${word} contains ${vowelCount} vowels and ${consonantCount} consonants`)
+vowelsAndConsonantsResult = `${word} contains ${vowelCount} vowels and ${consonantCount} consonants`;
+console.log(vowelsAndConsonantsResult);
 
-//export { vowelsAndConsonantsResult };
+export { vowelsAndConsonantsResult };

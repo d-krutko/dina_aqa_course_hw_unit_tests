@@ -34,9 +34,10 @@ for (let i = 1; i <= 100; i++) {
     fizzBuzzResult += '\n';
 }
 
+fizzBuzzResult = fizzBuzzResult.slice(0, fizzBuzzResult.length - 1);
 console.log(fizzBuzzResult);
 
 
 
 
-//export { fizzBuzzResult };
+export { fizzBuzzResult };

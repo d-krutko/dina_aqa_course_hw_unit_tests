@@ -38,6 +38,8 @@ for (let i = 1; i <= 5; i++) {
     smilePatternResult = smilePatternResult + defaultString;
 }
 
+smilePatternResult = smilePatternResult.slice(0, smilePatternResult.length - 1);
+
 console.log(smilePatternResult);
 
 
@@ -57,4 +59,4 @@ replaceSpacesWithOneResult = text.replaceAll(' ', '1');
 console.log(replaceSpacesWithOneResult);
 
 
-//export { evenNumbersResult, smilePatternResult, replaceSpacesWithOneResult };
+export { evenNumbersResult, smilePatternResult, replaceSpacesWithOneResult };
