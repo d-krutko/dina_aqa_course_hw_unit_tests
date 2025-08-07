@@ -7,19 +7,22 @@ const word = 'hello';
 
 let vowelsAndConsonantsResult = '';
 const vowels = 'aeoui';
+const consonants = 'hlptrwqsdfgknmbvcdfsxz';
 let vowelCount = 0;
 let consonantCount = 0;
+
+word.toLowerCase();
 
 for (let i = 0; i < word.length; i++) {
     if (vowels.includes(word[i])) {
         vowelCount++;
-    } else {
+    } else if (consonants.includes(word[i])) {
         consonantCount++;
     }
 
 }
 
-vowelsAndConsonantsResult = `${word} contains ${vowelCount} vowels and ${consonantCount} consonants`;
+vowelsAndConsonantsResult = `hello contains ${vowelCount} vowels and ${consonantCount} consonants`;
 console.log(vowelsAndConsonantsResult);
 
 export { vowelsAndConsonantsResult };
