@@ -4,8 +4,12 @@
 */
 
 function isPalindrom(word) {
-  // Ваш код
+  const normalWord = word.toLowerCase();
+  const reverseWord = word.split('').reverse().join('').toLowerCase();
+  return normalWord === reverseWord;
 }
+
+console.log(isPalindrom('Madam'));
 
 /*
  2. findLongestWords()
@@ -15,7 +19,14 @@ function isPalindrom(word) {
 */
 
 function findLongestWords(sentence) {
-  // Ваш код
+  const splitted = sentence.split(' ')
+
+  const maxWordLength = Math.max(...splitted.map(word => word.length))
+
+  const result = splitted.filter(word => word.length === maxWordLength);
+  return result;
 }
 
-export { isPalindrom, findLongestWords };
+console.log(findLongestWords('Hello world cucumber solo dadasfdsfdewq vncxas homework'))
+
+//export { isPalindrom, findLongestWords };
