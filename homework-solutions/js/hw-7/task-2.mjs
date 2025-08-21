@@ -4,6 +4,10 @@
 */
 
 function isPalindrom(word) {
+  if (typeof word !== 'string') {
+    return false;
+  }
+
   const normalWord = word.toLowerCase();
   const reverseWord = word.split('').reverse().join('').toLowerCase();
   return normalWord === reverseWord;
@@ -19,9 +23,13 @@ console.log(isPalindrom('Madam'));
 */
 
 function findLongestWords(sentence) {
-  const splitted = sentence.split(' ')
+  if (typeof sentence !== 'string') {
+    throw new Error('На вход подана не строка');
+  }
 
-  const maxWordLength = Math.max(...splitted.map(word => word.length))
+  const splitted = sentence.split(' ');
+
+  const maxWordLength = Math.max(...splitted.map(word => word.length));
 
   const result = splitted.filter(word => word.length === maxWordLength);
   return result;
@@ -29,4 +37,4 @@ function findLongestWords(sentence) {
 
 console.log(findLongestWords('Hello world cucumber solo dadasfdsfdewq vncxas homework'))
 
-//export { isPalindrom, findLongestWords };
+export { isPalindrom, findLongestWords };

@@ -22,17 +22,23 @@ console.log(mergeArrays([1, 2], [2, 3]));
     - Пример: I am super engineer => i_Am_Super_Engineer
   */
 function devideBy(sentence) {
-  const splitted = sentence.split(' ');
-  const [firstWord, ...otherWords] = splitted;
+  if ((typeof sentence !== 'string')) {
+    throw new Error('На вход подана не строка');
+  }
 
-  const firstWordResult = firstWord[0].toLowerCase() + firstWord.slice(1);
-  const otherWordsResult = otherWords.map(word => word[0].toUpperCase() + word.slice(1));
+  const splitted = sentence.split(/\s+/);
+  const [firstWord, ...rest] = splitted;
+  console.log(splitted)
+  console.log(rest)
+
+  const firstWordResult = firstWord.toLowerCase();
+  const otherWordsResult = rest.map(word => word[0].toUpperCase() + word.slice(1).toLowerCase());
 
   const result = [firstWordResult, ...otherWordsResult].join('_');
   return result;
 }
 
-console.log(devideBy('I am super engineer'))
+console.log(devideBy('HeLLo WoRLD'))
 /*
   3. Фибаначчи
     - Напишите функцию fibonacci(n), возвращающую энное число Фибоначчи
