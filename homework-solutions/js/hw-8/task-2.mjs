@@ -25,7 +25,7 @@ function countOfVowels(word) {
 }
 
 function sortedByVowels(wordsArr) {
-  return wordsArr.sort((a, b) => countOfVowels(a.toLowerCase()) - countOfVowels(b.toLowerCase()));
+  return [...wordsArr].sort((a, b) => countOfVowels(a.toLowerCase()) - countOfVowels(b.toLowerCase()));
 }
 
 console.log(sortedByVowels(words))

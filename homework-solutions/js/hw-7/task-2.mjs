@@ -23,8 +23,8 @@ console.log(isPalindrom('Madam'));
 */
 
 function findLongestWords(sentence) {
-  if (!sentence || typeof sentence !== 'string') {
-    return [];
+  if (typeof sentence !== 'string') {
+    throw new Error('На вход подана не строка');
   }
 
   const splitted = sentence.split(' ');

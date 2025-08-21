@@ -22,8 +22,8 @@ console.log(mergeArrays([1, 2], [2, 3]));
     - Пример: I am super engineer => i_Am_Super_Engineer
   */
 function devideBy(sentence) {
-  if (!sentence) {
-    return ''
+  if ((typeof sentence !== 'string')) {
+    throw new Error('На вход подана не строка');
   }
 
   const splitted = sentence.split(/\s+/);
@@ -31,7 +31,7 @@ function devideBy(sentence) {
   console.log(splitted)
   console.log(rest)
 
-  const firstWordResult = firstWord[0].toLowerCase() + firstWord.slice(1).toLowerCase();
+  const firstWordResult = firstWord.toLowerCase();
   const otherWordsResult = rest.map(word => word[0].toUpperCase() + word.slice(1).toLowerCase());
 
   const result = [firstWordResult, ...otherWordsResult].join('_');
